@@ -10,7 +10,7 @@ function App() {
       .get(
         `https://unpkg.com/@etalab/decoupage-administratif@2.2.1/data/departements.json`
       )
-      .then((res) => setGetData(res.data));
+      .then((res) => setGetData(res.data.sort(() => Math.random() - 0.5)));
   }, []);
 
   return (
