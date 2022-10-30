@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.rule{
+    display: block;
+    text-align: center;
+    padding-top: 50px;
+    margin: 0 50px;
+    color: whitesmoke;
+}
+
+.header-container{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background-image: url('./imgs/main-header-app-departements.jpg');
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-container::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.header-container h1{
+    text-align: center;
+    font-size: clamp(3rem, 0.5rem + 8vw, 5rem);
+    color: rgb(225, 225, 225);
+    z-index: 1;
+}
+
+.results{
+    max-width: 1600px;
+    height: auto;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, 200px);
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.cards{
+    position: relative;
+    width: 200px;
+    height: 300px;
+    background: rgb(225, 225, 225);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 30px;
+}
+
+.cards h2{
+    text-align: center;
+}
+
+.cards .number,
+.cards p{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.cards p{
+    color: rgb(129, 112, 15);
+}
