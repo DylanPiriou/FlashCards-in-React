@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 export default function Cards({ item }) {
-  const [showNumber, setShowNumber] = useState(true);
+  const [showNumber, setShowNumber] = useState(false);
 
   const handleShow = () => {
-    setShowNumber(!showNumber);
+    setShowNumber(true);
   };
 
   return (

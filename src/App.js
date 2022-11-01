@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Cards from "./components/Cards";
+import RandomBtn from "./components/RandomBtn";
 
 function App() {
   const [getData, setGetData] = useState([]);
@@ -18,10 +19,13 @@ function App() {
       <div className="header-container">
         <h1>Apprendre les départements français</h1>
       </div>
-      <p className="rule">
-        Cliquer sur les cartes pour faire disparaitre/apparaitre les numéros de
-        département.
-      </p>
+      <div className="game">
+        <p className="rule">
+          Cliquer sur les cartes pour faire disparaitre/apparaitre les numéros
+          de département.
+        </p>
+        <RandomBtn />
+      </div>
       <div className="results">
         {getData.map((item, key) => {
           return <Cards item={item} />;
