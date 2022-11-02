@@ -14,43 +14,6 @@ body{
     padding: 50px 0;
 }
 
-nav{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 6vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    z-index: 10;
-}
-
-nav a{
-    text-decoration: none;
-    color: grey;
-}
-
-input[type="text"]{
-    display: block;
-    margin: 0 auto;
-    width: 500px;
-    height: 50px;
-    text-align: center;
-    border-radius: 25px;
-    outline: none;
-    border: none;
-    margin-top: 50px;
-}
-
-.default-txt{
-    color: grey;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .game{
     display: flex;
     flex-direction: column;
@@ -72,8 +35,6 @@ input[type="text"]{
     padding: 10px 15px;
     border-radius: 25px;
     margin: 0 auto;
-    border: none;
-    outline: none;
     color: whitesmoke;
     transition: background .3s ease;
 }
@@ -109,13 +70,6 @@ input[type="text"]{
     font-size: clamp(3rem, 0.5rem + 8vw, 5rem);
     color: rgb(225, 225, 225);
     z-index: 1;
-}
-
-.header-container span{
-    color: transparent;
-    background-image: linear-gradient(to right, rgb(17, 17, 134), white, rgb(176, 15, 15));
-    -webkit-background-clip: text;
-    background-clip: text;
 }
 
 .results{

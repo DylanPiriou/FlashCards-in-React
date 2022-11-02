@@ -4,7 +4,7 @@ export default function Cards({ item }) {
   const [showNumber, setShowNumber] = useState(false);
 
   const handleShow = () => {
-    setShowNumber(!showNumber);
+    setShowNumber(true);
   };
 
   return (

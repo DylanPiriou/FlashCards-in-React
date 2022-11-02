@@ -1,38 +1,13 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import Cards from "./components/Cards";
-import RandomBtn from "./components/RandomBtn";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Find from "./pages/Find";
+import Home from "./pages/Home";
 
-function App() {
-  const [getData, setGetData] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get(
-        `https://unpkg.com/@etalab/decoupage-administratif@2.2.1/data/departements.json`
-      )
-      .then((res) => setGetData(res.data.sort(() => Math.random() - 0.5)));
-  }, []);
-
+export default function App() {
   return (
-    <>
-      <div className="header-container">
-        <h1>Apprendre les départements français</h1>
-      </div>
-      <div className="game">
-        <p className="rule">
-          Cliquer sur les cartes pour faire disparaitre/apparaitre les numéros
-          de département.
-        </p>
-        <RandomBtn />
-      </div>
-      <div className="results">
-        {getData.map((item, key) => {
-          return <Cards item={item} />;
-        })}
-      </div>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/rechercher" element={<Find />} />
+    </Routes>
   );
 }
-
-export default App;
