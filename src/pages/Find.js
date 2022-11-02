@@ -8,9 +8,9 @@ export default function Find() {
   const [searchData, setSearchData] = useState();
 
   useEffect(() => {
-    const nomLieu = `nom=${searchData}`;
+    const nomLieu = searchData && `nom=${searchData}`;
     axios
-      .get(`https://geo.api.gouv.fr/departements?${nomLieu}`)
+      .get("https://geo.api.gouv.fr/departements?" + nomLieu)
       .then((res) => setGetInf(res.data));
   }, [searchData]);
 
@@ -23,13 +23,9 @@ export default function Find() {
         placeholder="Entrer le nom du département"
       />
       <div className="results">
-        {!searchData ? (
-          <h3 className="default-txt">Pas de résultats</h3>
-        ) : (
-          getInf.map((item) => {
-            return <Cards item={item} />;
-          })
-        )}
+        {getInf.map((item) => {
+          return <Cards item={item} />;
+        })}
       </div>
     </>
   );

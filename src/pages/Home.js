@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Cards from "../components/Cards";
+import CardsHome from "../components/CardsHome";
 import RandomBtn from "../components/RandomBtn";
 import Navbar from "../components/Navbar";
 
@@ -30,7 +30,7 @@ export default function Home() {
       </div>
       <div className="results">
         {getData.map((item, key) => {
-          return <Cards item={item} />;
+          return <CardsHome item={item} />;
         })}
       </div>
     </>
