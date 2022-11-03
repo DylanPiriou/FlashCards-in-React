@@ -6,6 +6,7 @@ export default function Navbar() {
     <nav>
       <NavLink to="/">Accueil</NavLink>
       <NavLink to="/rechercher">Rechercher</NavLink>
+      <NavLink to="/carte">Carte</NavLink>
     </nav>
   );
 }

@@ -5,18 +5,19 @@
 }
 
 body{
-    background: #000;
+    background-image: linear-gradient(to right, rgb(30, 30, 30), black);
     background-position: center;
     background-size: cover;
     object-fit: cover;
     background-repeat: no-repeat;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", sans-serif;
     padding: 50px 0;
 }
 
 nav{
     position: fixed;
     top: 0;
+    background: #000;
     width: 100%;
     height: 6vh;
     display: flex;
@@ -34,13 +35,17 @@ nav a{
 input[type="text"]{
     display: block;
     margin: 0 auto;
-    width: 500px;
+    width: 50%;
     height: 50px;
     text-align: center;
     border-radius: 25px;
     outline: none;
     border: none;
     margin-top: 50px;
+}
+
+input[type="text"]:focus{
+    outline: 2px solid rgb(176, 15, 15);
 }
 
 .default-txt{
@@ -68,7 +73,7 @@ input[type="text"]{
 }
 
 .random-btn{
-    background: crimson;
+    background: rgb(176, 15, 15);
     padding: 10px 15px;
     border-radius: 25px;
     margin: 0 auto;
@@ -109,13 +114,8 @@ input[type="text"]{
     font-size: clamp(3rem, 0.5rem + 8vw, 5rem);
     color: rgb(225, 225, 225);
     z-index: 1;
-}
-
-.header-container span{
-    color: transparent;
-    background-image: linear-gradient(to right, rgb(17, 17, 134), white, rgb(176, 15, 15));
-    -webkit-background-clip: text;
-    background-clip: text;
+    font-family: 'Smilefriend', sans-serif;
+                                                
 }
 
 .results{
@@ -161,5 +161,15 @@ input[type="text"]{
 
 .cards p{
     color: rgb(206, 180, 29);
+}
+
+.map-fr{
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
 }
 
